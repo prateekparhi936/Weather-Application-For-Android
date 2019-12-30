@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar1_splash"
+        style="?android:attr/progressBarStyleLarge"
+        android:indeterminateDrawable="@drawable/progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:translationZ="-1dp"/>
+
+    <TextView
+        android:id="@+id/tv_below_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="345dp"
+        android:text="Fetching Weather"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/splash_logo_mid"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/splash_screen_logo_middle" />
+
+
+    <ImageView
+        android:id="@+id/splash_logo_bot"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="670dp"
+        android:fillViewport="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/powered_by_dark_background"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/rootlayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorblack"
+tools:context=".MainActivity">
+
+<include
+    android:id="@+id/app_bar_summary"
+    layout="@layout/toolbar_summaryview" />
+
+        <ImageView
+            android:id="@+id/favtabid"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginLeft="200dp"
+            android:src="@drawable/favtabicon">
+        </ImageView>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:indeterminateDrawable="@drawable/progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:translationZ="-1dp"/>
+
+    <TextView
+        android:id="@+id/tv_below_prog_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="345dp"
+        android:text="Fetching Weather"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true">
+    </TextView>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_view1_summ"
+    android:layout_width="399dp"
+    android:layout_height="190dp"
+    android:layout_marginTop="102dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="@color/colordarkgray"
+    app:cardCornerRadius="20dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:onClick="startSummaryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/card1_summicon"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="110px"
+            android:layout_marginLeft="200px"
+            />
+
+
+        <TextView
+            android:id="@+id/card1_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160px"
+            android:paddingLeft="90dp"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/card1_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:paddingLeft="70dp"
+            android:layout_below="@+id/card1_textview1"
+            />
+
+        <TextView
+            android:id="@+id/card1_textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/card1_infoicon"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/card1_textview3"
+            android:layout_marginRight="-125dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/information_outline_icon" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_view2_summ"
+    android:layout_width="399dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="302dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="@color/colordarkgray"
+    app:cardCornerRadius="20dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableLayout
+            android:id="@+id/card2_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            >
+
+            <TableRow
+                android:id="@+id/card2_row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <ImageView
+                    android:id="@+id/card2_row1_humidicon"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/water_percent"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/card2_row1_windspeedicon"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/weather_windy"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/card2_row1_visibilityicon"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/eye_outline"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/card2_row1_pressureicon"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/gauge"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/card2_row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle">
+                <TextView
+                    android:id="@+id/card2_row2_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:padding="10dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/card2_row2_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/card2_row2_txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card2_row2_txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/card2_row3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle">
+                <TextView
+                    android:id="@+id/card2_row3_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity"
+                    android:textColor="@color/colorwhite"
+                    android:padding="3dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/card2_row3_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wind Speed"
+                    android:padding="3dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/card2_row3_txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visibility"
+                    android:padding="3dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card2_row3_txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pressure"
+                    android:padding="3dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+            </TableRow>
+
+
+
+        </TableLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+<ScrollView
+    android:id="@+id/scollview_page1"
+    android:layout_width="match_parent"
+    android:layout_height="1600dp"
+    android:layout_marginTop="472dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/rounded_edge">
+
+
+        <TableLayout
+            android:id="@+id/card3_table2"
+            android:layout_width="match_parent"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r1_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r1_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r1_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r1_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r2_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r2_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r2_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r2_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r3_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r3_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r3_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r3_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r4_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r4_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r4_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r4_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r5_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r5_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r5_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r5_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r6_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r6_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r6_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r6_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r7_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r7_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r7_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r7_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+            <TableRow
+                android:padding="10dp"
+                android:id="@+id/card3_row8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:showDividers="middle"
+                >
+
+
+                <TextView
+                    android:id="@+id/card3_r8_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/card3_r8_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/card3_r8_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/card3_r8_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorwhite"
+                    android:layout_gravity="center"/>
+            </TableRow>
+
+
+
+
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+</RelativeLayout>
