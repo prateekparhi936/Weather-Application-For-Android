@@ -1,7 +1,9 @@
 # Angular-Node Weather Feeds								              
 
 •	Implemented Live Weather Search App that allows user to search for weather information using Forecast.io API’s.
+
 •	Developed Features like autocomplete, and favorite Weather using local storage.
+
 •	Designed the pages using Bootstrap and Angular Material. Implemented REST API’s in NODE JS and deployed the website on AWS.
 
 ## Demo
